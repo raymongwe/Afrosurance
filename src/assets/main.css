@@ -1,0 +1,21 @@
+/* Imports for the fonts specified in your requirements */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+  --brand-red: #E53935;
+  --brand-gold: #FFB300;
+}
+
+h1, h2, h3, .text-h1, .text-h2 {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700;
+}
+
+body, .v-application {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.brand-gradient {
+  background: linear-gradient(45deg, var(--brand-red), var(--brand-gold));
+}
+
