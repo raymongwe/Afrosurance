@@ -4,7 +4,7 @@
       <h2 class="text-h3 mb-2 font-weight-bold">Why Afrosurance?</h2>
       <p class="text-grey text-body-1">Protection built for you.</p>
     </div>
-
+    
     <v-row>
       <v-col cols="12" md="4">
         <v-card variant="text" class="pa-6">
