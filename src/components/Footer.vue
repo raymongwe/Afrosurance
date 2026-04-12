@@ -4,9 +4,14 @@
       <v-row class="mb-12">
         <v-col cols="12" md="5" class="pr-md-16">
           <div class="d-flex align-center mb-6">
-            <v-avatar color="secondary" size="40" class="mr-3 rounded-lg">
-              <span class="text-black font-weight-bold">A</span>
-            </v-avatar>
+            <v-img
+              src="Adobe Express - file.png"
+              width="50"
+              height="50"
+              class="rounded-lg mr-3 flex-grow-0"
+              alt="Afrosurance Logo"
+              contain
+            ></v-img>
             <h3 class="text-h5 font-weight-bold text-white">Afrosurance</h3>
           </div>
           

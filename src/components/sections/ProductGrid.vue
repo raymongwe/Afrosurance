@@ -10,7 +10,7 @@
           <p class="text-caption text-secondary font-weight-bold mb-4">From {{ product.from }}</p>
           <p class="text-body-2 text-grey-lighten-1 mb-6">{{ product.tagline }}</p>
           <v-spacer></v-spacer>
-          <v-btn variant="text" color="secondary" class="px-0 mt-2 text-capitalize justify-start" append-icon="mdi-chevron-right" @click="activeProduct = product">
+          <v-btn variant="text" color="secondary" class="px-0 mt-2 text-capitalize justify-start" append-icon="mdi-chevron-right" @click="handleLearnMore(product)">
             Learn More
           </v-btn>
         </v-card>
@@ -18,7 +18,7 @@
     </v-row>
 
     <v-expand-transition>
-      <div v-if="activeProduct" class="my-10 pt-10 border-t-sm border-grey-darken-3">
+      <div v-if="activeProduct" ref="detailsSection" class="my-10 pt-10 border-t-sm border-grey-darken-3">
         <v-card color="surface" class="rounded-xl pa-8" flat border>
           
           <v-row class="mb-8">
@@ -70,7 +70,24 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import { products } from '@/data/products.js'
+
 const activeProduct = ref(null)
+const detailsSection = ref(null)
+
+const handleLearnMore = async (product) => {
+  activeProduct.value = product
+  
+  // Wait for Vue to update the DOM (and render the div)
+  await nextTick()
+  
+  // Scroll to the element smoothly
+  if (detailsSection.value) {
+    detailsSection.value.scrollIntoView({ 
+      behavior: 'smooth', 
+      block: 'start' 
+    })
+  }
+}
 </script>

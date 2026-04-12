@@ -54,7 +54,7 @@
               size="large" 
               prepend-icon="mdi-whatsapp"
               elevation="8"
-              href="https://wa.me/27000000000"
+              href="https://wa.me/27795565218"
             >
               Chat with Us
             </v-btn>
@@ -78,6 +78,10 @@ const faqItems = ref([
     answer: "You must be a resident of South Africa and hold a valid South African ID or passport. For Group Cover, the main applicant needs an ID, and members are registered under their certificate."
   },
   {
+    question: "How much coverage does each person receive?",
+    answer: "Everyone on the policy receives the full benefit amount. For example, if you choose a R20,000 plan, every single person covered under that plan individually gets R20,000 in cover."
+  },
+  {
     question: "How do I make premium payments?",
     answer: "We support several flexible payment options including mobile money (MTN MoMo, Vodapay) and secure debit orders. Payments can be daily, weekly, or monthly."
   },
@@ -93,7 +97,6 @@ const faqItems = ref([
 </script>
 
 <style scoped>
-
 /* Custom border to match the clean 'line-only' look */
 .faq-border {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -107,7 +110,7 @@ const faqItems = ref([
 
 /* Font styling */
 .text-h6 {
-  font-family: 'Playfair Display', serif !important;
+  font-family: inherit !important;
   letter-spacing: -0.2px !important;
 }
 
@@ -115,5 +118,9 @@ const faqItems = ref([
 .v-expansion-panel--active, 
 .v-expansion-panel--active:hover {
   background-color: transparent !important;
+}
+
+.faq-panels :deep(.v-expansion-panel__shadow) {
+  display: none;
 }
 </style>

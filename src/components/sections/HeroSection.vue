@@ -1,10 +1,11 @@
 <template>
   <v-img
-    src="https://images.unsplash.com/photo-1577896849786-738ed6c78bd3?q=80&w=1174&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    src="national-cancer-institute-VJVsEnR_vNE-unsplash (1).webp"
     cover
     min-height="55vh"
     max-height="85vh"
     class="d-flex align-center"
+    color="background"
   >
     <div 
       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
@@ -18,8 +19,8 @@
             color="primary"
             variant="outlined"
             size="small"
-            class="mb-4 px-4 text-primary"
-            style="background-color: rgba(var(--v-theme-primary), 0.1) !important;"
+            class="mb-4 px-4 text-secondary"
+            style="background-color: rgba(var(--v-theme-secondary), 0.1) !important;"
           >
             Afrosurance Brokers
           </v-chip>

@@ -4,14 +4,14 @@
       class="d-flex align-center brand-link" 
       @click="handleScroll('top')"
     >
-      <v-sheet 
-        color="primary" 
-        width="40" 
-        height="40" 
-        class="rounded-lg d-flex align-center justify-center mr-3"
-      >
-        <span class="text-white font-weight-bold text-h6" style="font-family: 'Playfair Display', serif;">A</span>
-      </v-sheet>
+      <v-img
+        src="Adobe Express - file.png"
+        width="50"
+        height="50"
+        class="rounded-lg mr-3"
+        alt="Description of image"
+        cover
+      ></v-img>
       
       <span class="font-weight-bold text-h6 text-white">Afrosurance</span>
     </div>
@@ -59,7 +59,7 @@
     <v-btn 
       color="primary" 
       variant="elevated" 
-      class="text-capitalize rounded-lg px-6 font-weight-bold" 
+      class="text-capitalize rounded-lg px-6 font-weight-bold d-none d-sm-flex" 
       height="48"
       prepend-icon="mdi-whatsapp"
       href="https://wa.me/27123456789"
@@ -107,6 +107,22 @@
         class="mb-2 rounded-lg"
         @click="handleScroll('#faq')"
       ></v-list-item>
+
+      <v-divider class="my-4"></v-divider>
+
+      <v-list-item class="px-2">
+        <v-btn
+          color="primary"
+          variant="elevated"
+          class="text-capitalize rounded-lg font-weight-bold"
+          prepend-icon="mdi-whatsapp"
+          href="https://wa.me/27123456789"
+          target="_blank"
+          block
+        >
+          Chat on WhatsApp
+        </v-btn>
+      </v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
@@ -131,9 +147,7 @@ const handleScroll = async (target) => {
     return
   }
 
-  // Check if we are already on the home page
   if (route.path === '/') {
-    // Scroll silently without changing the URL
     const el = document.querySelector(target)
     if (el) {
       const offset = 90
@@ -148,11 +162,8 @@ const handleScroll = async (target) => {
       })
     }
   } else {
-    // If we are on About/Legal, we MUST go home first.
-    // We use router.push('/') then wait for it to load, then scroll.
     await router.push('/')
     
-    // Give the browser a tiny moment to render the Home page
     setTimeout(() => {
       const el = document.querySelector(target)
       if (el) {
@@ -175,8 +186,6 @@ const handleScroll = async (target) => {
 <style scoped>
 .brand-link {
   padding-left: 2rem;
-}
-.brand-link {
   cursor: pointer;
   transition: transform 0.2s ease;
 }
