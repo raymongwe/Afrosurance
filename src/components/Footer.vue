@@ -5,7 +5,7 @@
         <v-col cols="12" md="5" class="pr-md-16">
           <div class="d-flex align-center mb-6">
             <v-img
-              src="Adobe Express - file.png"
+              src="bright-logo.png"
               width="50"
               height="50"
               class="rounded-lg mr-3 flex-grow-0"

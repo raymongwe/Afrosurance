@@ -5,7 +5,7 @@
       @click="handleScroll('top')"
     >
       <v-img
-        src="Adobe Express - file.png"
+        src="normal-log.png"
         width="50"
         height="50"
         class="rounded-lg mr-3"
@@ -81,6 +81,25 @@
     color="background"
     width="300"
   >
+    <div class="pa-8 d-flex flex-column align-center text-center">
+      <v-img
+        src="bright-logo.png"
+        width="100"
+        height="100"
+        class="mb-4"
+        alt="Afrosurance Logo"
+        contain
+      ></v-img>
+      <div class="text-h6 font-weight-bold text-white text-uppercase" style="letter-spacing: 2px;">
+        Afrosurance
+      </div>
+      <div class="text-caption text-grey-lighten-1" style="letter-spacing: 4px;">
+        BROKERS
+      </div>
+    </div>
+
+    <v-divider></v-divider>
+
     <v-list class="pa-4">
       <v-list-item 
         title="Products" 
