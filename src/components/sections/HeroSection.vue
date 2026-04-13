@@ -1,20 +1,20 @@
 <template>
-  <v-img
-    src="national-cancer-institute-VJVsEnR_vNE-unsplash (1).webp"
-    cover
-    eager
-    class="hero-section d-flex align-center"
-  >
-    <div class="hero-overlay"></div>
+  <div class="hero-wrapper d-flex align-center">
+    
+    <div class="hero-gpu-layer">
+      <v-img
+        src="national-cancer-institute-VJVsEnR_vNE-unsplash (1).webp"
+        cover
+        eager
+        class="hero-img"
+      ></v-img>
+      <div class="hero-overlay"></div>
+    </div>
 
-    <v-container style="position: relative; z-index: 2;">
+    <v-container class="hero-content">
       <v-row>
         <v-col cols="12" md="7" lg="6" class="text-center text-md-left">
-          <v-chip
-            variant="outlined"
-            size="small"
-            class="mb-4 px-4 text-secondary custom-chip"
-          >
+          <v-chip variant="outlined" size="small" class="mb-4 px-4 text-secondary custom-chip">
             Afrosurance Brokers
           </v-chip>
 
@@ -28,39 +28,29 @@
           </p>
           
           <div class="d-flex ga-3 flex-column flex-sm-row justify-center justify-md-start">
-            <v-btn 
-              size="large" 
-              color="primary" 
-              class="rounded-lg px-8 text-capitalize font-weight-bold" 
-              href="https://wa.me/27000000000"
-              target="_blank"
-              prepend-icon="mdi-whatsapp"
-            >
+            <v-btn size="large" color="primary" class="rounded-lg px-8 text-capitalize font-weight-bold" 
+                   href="https://wa.me/27000000000" target="_blank" prepend-icon="mdi-whatsapp">
               Get Started on WhatsApp
             </v-btn>
 
-            <v-btn 
-              size="large" 
-              variant="outlined" 
-              color="white" 
-              class="rounded-lg px-8 text-capitalize" 
-              @click="scrollToHow"
-            >
+            <v-btn size="large" variant="outlined" color="white" class="rounded-lg px-8 text-capitalize" @click="scrollToHow">
               Learn More
             </v-btn>
           </div>
         </v-col>
       </v-row>
     </v-container>
-  </v-img>
+  </div>
 </template>
 
-<script setup>
-const scrollToHow = () => {
+<script setup lang="ts">
+// Defining the function clearly inside script setup
+const scrollToHow = (): void => {
   const el = document.querySelector('#how-it-works');
   if (el) {
     const navbarOffset = 90;
     const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+    
     window.scrollTo({
       top: elementPosition - navbarOffset,
       behavior: 'smooth'
@@ -70,18 +60,33 @@ const scrollToHow = () => {
 </script>
 
 <style scoped>
-.hero-section {
-  /* Keeps the full-screen height you like */
-  height: 100dvh; 
+.hero-wrapper {
+  height: 100dvh;
   width: 100%;
   position: relative;
-  /* Keeps the image in memory for zero-lag scrolling */
-  will-change: transform;
-  transform: translateZ(0);
+  overflow: hidden;
+  background-color: #2d2d2f; /* Solid fallback */
 }
 
-/* THE CENTERING FIX: center 40% cuts a bit of the top and a bit of the bottom */
+.hero-gpu-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Force GPU rendering to prevent lag and memory purging */
+  transform: translate3d(0, 0, 0); 
+  will-change: transform;
+  z-index: 0;
+}
+
+.hero-img {
+  height: 100%;
+  width: 100%;
+}
+
 :deep(.v-img__img) {
+  /* Centered and cropped perfectly */
   object-position: center 40% !important;
 }
 
@@ -91,24 +96,23 @@ const scrollToHow = () => {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  /* Original Dark Colors */
   background: linear-gradient(
     to bottom, 
-    rgba(45, 45, 47, 0.8) 20%, 
+    rgba(45, 45, 47, 0.6) 20%, 
     rgba(45, 45, 47, 0.4) 100%
   );
 }
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
 @media (min-width: 960px) {
-  .hero-section {
-    height: 85vh !important;
-  }
+  .hero-wrapper { height: 85vh; }
   .hero-overlay {
-    background: linear-gradient(
-      to right, 
-      rgba(45, 45, 47, 0.7) 20%, 
-      rgba(45, 45, 47, 0.4) 100%
-    );
+    background: linear-gradient(to right, rgba(45, 45, 47, 0.7) 20%, rgba(45, 45, 47, 0.4) 100%);
   }
 }
 
@@ -125,15 +129,10 @@ const scrollToHow = () => {
 h1 {
   font-family: 'Playfair Display', serif !important;
   letter-spacing: -0.5px !important;
-  line-height: 1.2 !important;
 }
 
 @media (max-width: 600px) {
-  h1 {
-    font-size: 2.1rem !important;
-  }
-  .v-btn {
-    width: 100%;
-  }
+  h1 { font-size: 2.1rem !important; }
+  .v-btn { width: 100%; }
 }
 </style>
