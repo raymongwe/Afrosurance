@@ -5,7 +5,7 @@
       @click="handleScroll('top')"
     >
       <v-img
-        src="normal-log.png"
+        src="bright-logo.webp"
         width="50"
         height="50"
         class="rounded-lg mr-3"
@@ -83,7 +83,7 @@
   >
     <div class="pa-8 d-flex flex-column align-center text-center">
       <v-img
-        src="bright-logo.png"
+        src="bright-logo.webp"
         width="100"
         height="100"
         class="mb-4"
