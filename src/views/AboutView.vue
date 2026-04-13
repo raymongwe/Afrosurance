@@ -27,7 +27,30 @@
               As a business, we believe in uplifting communities we do business in. This will come in many facets, ranging from the creation of products and services which creates value for our clients to promoting the culture of entrepreneurship in these communities. We create entrepreneurship by partnering with locals as independent contractors in driving business sales and by partnering with local businesses on the benefits we can offer our clients. This will create an ecosystem that drives money circulation within communities we do business in and thus help with the development of such communities.
             </p>
 
-            <h1 class="text-h2 font-weight-bold text-white mb-8">Things to note</h1>
+            <h1 class="text-h2 font-weight-bold text-white mb-8">How To Claim</h1>
+
+            <ul>
+              <li>
+               Certified proof of identity for the claimant (certified copy of ID or certified copy of birth certificate).
+              </li>
+              <li>
+                Certified proof of identity for the deceased (certified copy of ID or certified copy of birth certificate).
+              </li>
+              <li>
+                Certified copy of death certificate of the deceased.
+              </li>
+              <li>
+                Fully completed police report, if the cause of death is unnatural; accidental; or suicide.
+              </li>
+              <li>
+                Certified copy of BI 1663 or DHA 1663 or BI 1680.
+              </li>
+              <li>
+                Completed documents must be sent to claims@afrosurance.co.za
+              </li>
+            </ul>
+
+             <h1 class="text-h2 font-weight-bold text-white mb-8">Things to note</h1>
 
             <ul>
               <li>
