@@ -4,8 +4,8 @@ import vuetify from 'vite-plugin-vuetify'
 import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
-  // Absolute path for GitHub Pages
-  base: '/Afrosurance/', 
+  // Reset to root for Vercel
+  base: '/', 
   plugins: [
     vue(),
     vuetify({ autoImport: true }),
